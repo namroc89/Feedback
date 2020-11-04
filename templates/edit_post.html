@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 
-{% block title %}Register User{% endblock %}
+{% block title %}Edit Feedback{% endblock %}
 
 {% block content %}
 
-<h1>Register User</h1>
-<p>Already have an account? <a href="/login">Log in here!</a></p>
+<h1>Edit Post</h1>
+<a href="/user/{{post.user.username}}" class="btn btn-danger">Cancel</a>
 
 <form method="POST">
     {{ form.hidden_tag() }}
@@ -22,7 +22,7 @@
     </p>
     {% endfor %}
 
-    <button class="btn btn-success" type="submit">Register</button>
+    <button class="btn btn-success" type="submit">Submit</button>
 </form>
 
 

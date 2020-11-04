@@ -16,6 +16,9 @@
         {% for msg in get_flashed_messages() %}
         <div class="alert alert-primary">{{ msg }}</div>
         {% endfor %}
+        {% if session['user_id'] %}
+        <a href="/logout">Logout</a>
+        {% endif %}
         {% block content %}
 
 
